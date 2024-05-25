@@ -1,6 +1,4 @@
-# pw-task
-
-# Test Automation Framework(TAF) powered by [playwright] library
+## playwright-task
 
 ## Set up local env
   Required software:
