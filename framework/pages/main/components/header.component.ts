@@ -27,7 +27,7 @@ class HeaderComponent extends BasePage {
     this.menuTabs = this.root.locator('[data-testid="header-component-item--navigation"] li');
   }
 
-  async openTab(tab: Tabs) {
+  async open(tab: Tabs) {
     await this.menuTabs.filter({ hasText : tab }).click();
     await this.page.reload();
   }

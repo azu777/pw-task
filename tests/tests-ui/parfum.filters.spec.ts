@@ -1,12 +1,10 @@
-import { test } from '../../framework/fixtures/page.fixtures';
+import { test } from '../../framework/fixtures';
 import { parfumFiltersData } from '../../data-storage';
 import { Tabs } from '../../framework/pages/main/components';
 
-test('Filters', async ({ page }) => {
-  await page.goto('/');
-  await page.locator('[data-testid="typeAhead-input"]').fill('ABCD');
-  await page.locator('[data-testid="header-component-item--wishlist"]').click();
-  await page.locator('input[placeholder="E-Mail-Adresse*"]').isVisible();
+test('Filters', async ({ mainPage, parfumPage }) => {
+  await mainPage.goTo('/');
+  await mainPage.headerTabs.open(Tabs.Parfum);
 });
 
 // for (const dataset of Object.entries(parfumFiltersData)) {

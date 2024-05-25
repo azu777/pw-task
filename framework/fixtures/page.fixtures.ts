@@ -8,11 +8,11 @@ type Pages = {
 };
 
 export const test = base.extend<Pages>({
-  homePage: ({ page }, use) => {
+  mainPage: ({ page }, use) => {
     const mainPage = new MainPage(page);
     use(mainPage);
   },
-  roulettePage: ({ page }, use) => {
+  parfumPage: ({ page }, use) => {
     const parfumPage = new ParfumPage(page);
     use(parfumPage);
   },
