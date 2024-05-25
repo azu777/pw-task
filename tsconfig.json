@@ -1,0 +1,21 @@
+{
+  "ts-node": {
+    "transpileOnly": true
+  },
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "outDir": "built",
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2019"
+    ],
+  },
+  "esModuleInterop": true,
+  "exclude": [
+    "node_modules",
+    "*playground.*"
+  ]
+}

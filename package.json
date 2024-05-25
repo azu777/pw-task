@@ -1,0 +1,22 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-fe": "export ENV=ui && playwright test tests/tests-ui/**.spec.ts",
+    "test-fe-ui": "export ENV=ui && playwright test --ui tests/tests-ui/**.spec.ts",
+    "test-api": "export ENV=ui && playwright test tests/tests-api/**.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.41.0",
+    "@types/node": "^20.11.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2"
+  }
+}
