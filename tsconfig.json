@@ -5,7 +5,10 @@
   "compileOnSave": true,
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es2017",
+    "target": "es2020",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "outDir": "built",
     "experimentalDecorators": true,
     "lib": [

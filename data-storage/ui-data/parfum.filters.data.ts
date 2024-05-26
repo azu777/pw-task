@@ -7,7 +7,7 @@ enum Categories {
 }
 
 enum Options {
-  Sale = 0,
+  Sale = 'Sale',
   Neu = 2,
   Limitiert = 3,
   MarkeOpt = 0,
@@ -15,6 +15,16 @@ enum Options {
   FurWenOpt = 0,
   GeschenkFurOpt = 0,
 }
+
+// enum Options {
+//   Sale = 0,
+//   Neu = 2,
+//   Limitiert = 3,
+//   MarkeOpt = 0,
+//   ProduktartOpt = 0,
+//   FurWenOpt = 0,
+//   GeschenkFurOpt = 0,
+// }
 
 const params = [
   {

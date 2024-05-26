@@ -4,7 +4,7 @@ import * as path from 'path';
 
 export const test = base.extend({
   storageState: async ({}, use) => {
-    const fileName = path.resolve('auth.json');
+    const fileName = path.resolve('storage.state.json');
 
     await use(fileName);
   },
