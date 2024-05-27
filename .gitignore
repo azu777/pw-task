@@ -4,7 +4,12 @@
 /out-tsc
 
 # dependencies
-/node_modules
+node_modules/
+test-results/
+package-lock.json
+.DS_Store
+tsconfig.tsbuildinfo
+playwright-report
 
 # IDEs and editors
 /.idea
@@ -14,6 +19,7 @@
 *.launch
 .settings/
 *.sublime-workspace
+
 
 # IDE - VSCode
 .vscode/*

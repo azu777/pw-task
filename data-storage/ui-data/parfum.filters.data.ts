@@ -3,28 +3,18 @@ enum Categories {
   Marke = 'Marke',
   Produktart = 'Produktart',
   Geschenkfur = 'Geschenk für',
-  Furwen = 'Für Wen',
+  FurWen = 'Für Wen',
 }
 
 enum Options {
-  Sale = 'Sale',
-  Neu = 2,
-  Limitiert = 3,
-  MarkeOpt = 0,
-  ProduktartOpt = 0,
-  FurWenOpt = 0,
-  GeschenkFurOpt = 0,
+  HighlightsSale = 'Sale',
+  HighlightsNeu = 'Neu',
+  HighlightsLimitiert = 'Limitiert',
+  MarkeOpt = 'Armani',
+  ProduktartOpt = 'Eau de Toilette',
+  FurWenOpt = 'Unisex',
+  GeschenkFurOpt = 'Anniversary',
 }
-
-// enum Options {
-//   Sale = 0,
-//   Neu = 2,
-//   Limitiert = 3,
-//   MarkeOpt = 0,
-//   ProduktartOpt = 0,
-//   FurWenOpt = 0,
-//   GeschenkFurOpt = 0,
-// }
 
 const params = [
   {
@@ -32,7 +22,7 @@ const params = [
     option: Options.ProduktartOpt,
   },
   {
-    filter: Categories.Furwen,
+    filter: Categories.FurWen,
     option: Options.FurWenOpt,
   },
   {
@@ -49,21 +39,21 @@ const parfumFiltersData = {
   saleProduktartFurwenMarkeParams: [
     {
       filter: Categories.Highlights,
-      option: Options.Sale,
+      option: Options.HighlightsSale,
     },
     ...params.slice(0, 3),
   ],
   neuProduktartFurwenParams: [
     {
       filter: Categories.Highlights,
-      option: Options.Neu,
+      option: Options.HighlightsNeu,
     },
     ...params.slice(0, 2),
   ],
   saleProduktartFurwenMarkeGeschenkfurParams: [
     {
       filter: Categories.Highlights,
-      option: Options.Limitiert,
+      option: Options.HighlightsLimitiert,
     },
     ...params
   ],

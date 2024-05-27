@@ -18,18 +18,21 @@ class ParfumPage extends BasePage {
     this.productsList = this.root.locator('[data-testid="product-tile"]');
   }
 
-  async filterParfumByCategory(filter: Categories, option: Options) {
+  async filterByCategory(filter: Categories, option: Options) {
     expect(await this.filtersList.count()).toBeGreaterThan(0);
     await this.filtersList.filter({ hasText: filter }).click();
-    expect(await this.optionsList.count()).toBeGreaterThan(0);
 
-    const optionToCheck = this.optionsList.filter({
-      hasText: option.toString(),
-    });
-    await optionToCheck.click();
-    await optionToCheck.isChecked({ timeout: 5000 });
+    await this.checkOption(option);
     await this.close.click();
     expect(await this.productsList.count()).toBeGreaterThan(0);
+  }
+
+  private async checkOption(option: Options) {
+    expect(await this.optionsList.count()).toBeGreaterThan(0);
+
+    const optionToCheck = this.optionsList.filter({ hasText: option.toString() });
+    await optionToCheck.click();
+    await optionToCheck.isChecked({ timeout: 5000 });
   }
 }
 
